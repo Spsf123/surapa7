@@ -20,7 +20,14 @@ string func2(string x){
 		y += toupper(x[i]);
 		i++;
 	}
-	return y;	
+	string b;
+	if(y == func1(y)){
+		b = "Yes";
+	}
+	else{ 
+		b = "No";
+	}
+	return b;
 }
 
 string func3(string x){
@@ -34,8 +41,10 @@ string func3(string x){
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+    cout << "Input text: ";
+	string a;
+	cin >> a;
+    cout << "Reversed text: " <<func1(a)<< "\n";
+    cout << "Palindrome: " <<func2(a);
     return 0;
 }
